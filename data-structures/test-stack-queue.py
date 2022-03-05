@@ -16,7 +16,7 @@ def main():
 	print("Result: ", queue1.isEmpty(), " - ", queue1.isFull())
 	print()
 
-	#Step-03: Push tickets into Queue
+	#Step-03: Push values into Queue
 	print("Test 2: Enqueueing nodes until full.")
 	print("Result: ", queue1.enqueue(4))
 	print("Result: ", queue1.enqueue(3))
@@ -25,7 +25,7 @@ def main():
 	print("Result: ", queue1.enqueue(0))
 	print()
 
-	#STEP-04: Peak at the top/empty Full
+	#STEP-04: Peek at the top/empty Full
 	print("Test 3: Queue front and Empty/Full")
 	print("Result: ", queue1.isEmpty(), " - ", queue1.isFull())
 	print("The value at the front of the queue is: ", queue1.front())
@@ -61,7 +61,7 @@ def main():
 	print("Result: ", stack1.isEmpty(), " - ", stack1.isFull())
 	print()
 
-	#Step-03: Push tickets into Stack
+	#Step-03: Push values into Stack
 	print("Test 2: Pushing values until full.")
 	print("Result: ", stack1.push(1))
 	print("Result: ", stack1.push(2))
@@ -70,7 +70,7 @@ def main():
 	print("Result: ", stack1.push(1))
 	print()
 
-	#STEP-04: Peak at the top/empty Full
+	#STEP-04: Peek at the top/empty Full
 	print("Test 3: Stack peek and Empty/Full")
 	print("Result: ", stack1.isEmpty(), " - ", stack1.isFull())
 	temp = stack1.peek()

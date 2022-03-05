@@ -32,7 +32,7 @@ class Queue:
 	def enqueue(self, value):
 	    '''Add a Node to the Queue'''
 	    success = True
-	    #check for full Queue or non MealTicket input
+	    #check for full Queue
 	    if self.isFull():
 	        success = False
 	    #create head Node if Queue is empty
@@ -45,16 +45,15 @@ class Queue:
 	        self.head.next = self.tail
 	    else:
 	        newNode = Node(value, None)
-	        #make self.tail.next point at Node with new MealTicket
+	        #make self.tail.next point at Node with new value
 	        self.tail.next = newNode
 	        #make the newest Node the tail
 	        self.tail = newNode
 	    if success:
-	        #only increment currentSize if a MealTicket has been added
+	        #only increment currentSize if a value has been added
 	        self.currentSize += 1
 	    return success
 
-	#in assignments 3 and 4 remember to set head.next to None after
 	def dequeue(self):
 	    '''Remove and return value at the front of the Queue'''
 	    if self.isEmpty():

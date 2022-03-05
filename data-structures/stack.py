@@ -29,25 +29,25 @@ class Stack:
         return self.currentSize == self.maxSize
 
     def push(self, value):
-        '''Add a MealTicket to the Stack'''
+        '''Add a value to the Stack'''
         success = True
-        #check for full Stack or non MealTicket input
+        #check for full Stack
         if self.isFull():
             success = False
         if success:
             #make a node for the new head that points at the old head
             newNode = Node(value, self.head)
             self.head = newNode
-            #only increment currentSize if a MealTicket has been added
+            #only increment currentSize if a value has been added
             self.currentSize += 1
         return success
 
     def pop(self):
-        '''Remove and return MealTicket at the front of the Stack'''
+        '''Remove and return value at the front of the Stack'''
         if self.isEmpty():
             success = False
         else:
-            #return ticket at head of Stack
+            #return value at head of Stack
             #make head.next the new head
             head = self.head
             newHead = head.next
@@ -57,7 +57,7 @@ class Stack:
         return success
 
     def peek(self):
-        '''Return MealTicket at the front of the Stack'''
+        '''Return value at the front of the Stack'''
         if self.isEmpty():
             success = False
         else:
